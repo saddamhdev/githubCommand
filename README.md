@@ -7,7 +7,7 @@ $ <b> <p>git init</p></b>
 <p>Initialized empty Git repository in H:/githubCommand/.git/</p>
 
 01957@saddamnvn MINGW64 /h/githubCommand (master)
-$ <b>git remote add origin https://github.com/saddamsaddam/githubCommand.git</b>
+$<b><p>git remote add origin https://github.com/saddamsaddam/githubCommand.git</p></b>
 
 01957@saddamnvn MINGW64 /h/githubCommand (master)
 $<b> <p>git add .</p></b>
