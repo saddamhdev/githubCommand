@@ -31,6 +31,28 @@ To https://github.com/saddamsaddam/githubCommand.git
 [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
+To download a GitHub project in VS Code, follow these steps:
+
+---
+
+### **Method 1: Using Git Bash (Command Line)**
+1. Open **Git Bash** or **VS Code Terminal (`Ctrl + ~`)**.
+2. Navigate to the desired folder:
+   ```sh
+   cd path/to/your/folder
+   ```
+3. Clone the repository:
+   ```sh
+   git clone https://github.com/username/repository.git
+   ```
+4. Open the project in VS Code:
+   ```sh
+   cd repository
+   code .
+   ```
+
+Let me know if you need help! 🚀
+
 
 
 If you're using **RSA** instead of **Ed25519** for your SSH key, here’s the updated guide to fix the **Permission denied (publickey)** error when pushing to GitHub:
