@@ -134,6 +134,39 @@ Let me know if you need more details or help! 😊
 
 
 
+If you want to change the GitHub user for the `bari` branch or a specific repository, you can update the Git configuration with a different user. Here's how you can set a different user for the `bari` branch:
+
+1. **Set a global username and email (for all repositories):**
+   If you want to set the user globally (for all repositories on your system), use this command:
+
+   ```bash
+   git config --global user.name "NewUserName"
+   git config --global user.email "newuser@example.com"
+   ```
+
+2. **Set a specific username and email for your repository (for this repo only):**
+   If you only want to set the user for the current repository (in this case, the `myreactapp` folder), run:
+
+   ```bash
+   git config user.name "NewUserName"
+   git config user.email "newuser@example.com"
+   ```
+
+3. **Switch the user for the `bari` branch:**
+   If you specifically want to use a different user for the `bari` branch, you can checkout that branch and then set the user locally:
+
+   ```bash
+   git checkout bari
+   git config user.name "NewUserName"
+   git config user.email "newuser@example.com"
+   ```
+
+After making these changes, you can push the branch again with the new user details.
+
+Let me know if you'd like further guidance!
+
+
+
 If you're using **RSA** instead of **Ed25519** for your SSH key, here’s the updated guide to fix the **Permission denied (publickey)** error when pushing to GitHub:
 
 ---
