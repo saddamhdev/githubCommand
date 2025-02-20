@@ -20,7 +20,7 @@ $ <b><p>git commit -m "version 1.0.0"</p></b>
  create mode 100644 ~$thubCommand.docx
 
 01957@saddamnvn MINGW64 /h/githubCommand (master)
-$<b><p> git push -u origin master</p></b>
+$<b><p> git push -u origin main</p></b>
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 8 threads
