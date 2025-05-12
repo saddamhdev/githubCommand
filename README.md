@@ -3,17 +3,26 @@
 
 
 01957@saddamnvn MINGW64 /h/githubCommand
-$ <b> <p>git init</p></b>
+```sh
+   git init
+ ```
 <p>Initialized empty Git repository in H:/githubCommand/.git/</p>
 
 01957@saddamnvn MINGW64 /h/githubCommand (master)
-$<b><p>git remote add origin https://github.com/saddamsaddam/githubCommand.git</p></b>
+ ```sh
+   git remote add origin https://github.com/saddamsaddam/githubCommand.git
+ ```
 
 01957@saddamnvn MINGW64 /h/githubCommand (master)
-$<b> <p>git add .</p></b>
+
+```sh
+   git add .
+ ```
 
 01957@saddamnvn MINGW64 /h/githubCommand (master)
-$ <b><p>git commit -m "version 1.0.0"</p></b>
+ ```sh
+   git commit -m "version 1.0.0"
+ ```
 [master (root-commit) 5772790] version 1.0.0
  2 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 githubCommand.docx
@@ -27,8 +36,9 @@ $ <b><p>git commit -m "version 1.0.0"</p></b>
    ```
 2. Gitlab:
    ```sh
-  git push -uf origin main
+   git push -uf origin main
    ```
+
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 8 threads
