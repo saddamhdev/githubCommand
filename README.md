@@ -4,20 +4,20 @@
 
 01957@saddamnvn MINGW64 /h/githubCommand
 ```sh
-   git init
- ```
+git init
+```
 <p>Initialized empty Git repository in H:/githubCommand/.git/</p>
 
 01957@saddamnvn MINGW64 /h/githubCommand (master)
  ```sh
-   git remote add origin https://github.com/Saddam-Hossen/githubCommand.git
+ git remote add origin https://github.com/Saddam-Hossen/githubCommand.git
  ```
 
 01957@saddamnvn MINGW64 /h/githubCommand (master)
 
 ```sh
-   git add .
- ```
+git add .
+```
 
 01957@saddamnvn MINGW64 /h/githubCommand (master)
  ```sh
