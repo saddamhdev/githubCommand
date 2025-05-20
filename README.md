@@ -21,7 +21,7 @@ git add .
 
 01957@saddamnvn MINGW64 /h/githubCommand (master)
  ```sh
-   git commit -m "version 1.0.0"
+ git commit -m "version 1.0.0"
  ```
 [master (root-commit) 5772790] version 1.0.0
  2 files changed, 0 insertions(+), 0 deletions(-)
