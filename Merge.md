@@ -72,3 +72,63 @@ git push origin --delete feature/demo # delete remote
 
 ---
 
+
+
+merge er khetre ki  commits gulo main ses e jukto hobe, mane mone hobe lstes?
+
+
+হ্যাঁ — **merge** করলে আপনার feature ব্রাঞ্চের commits গুলো `main` এর শেষে যুক্ত হবে, কিন্তু একটা ব্যাপার আছে:
+
+---
+
+## 1️⃣ Fast-forward merge হলে
+
+যদি `main` এ আপনার feature ব্রাঞ্চ তৈরির পর থেকে **কোনও নতুন commit না আসে**, তাহলে merge করার সময় `main` সরাসরি feature এর শেষ commit এ চলে যাবে।
+
+* এতে মনে হবে আপনার commits `main` এর latest হিসেবে যুক্ত হয়েছে।
+* **কোনও extra merge commit তৈরি হবে না**।
+
+**উদাহরণ:**
+
+```
+main:    A---B
+feature: A---B---C---D
+
+merge (fast-forward):
+main:    A---B---C---D
+```
+
+---
+
+## 2️⃣ 3-way merge (merge commit) হলে
+
+যদি `main` এ feature branch তৈরির পর **নতুন commit এসে যায়**, তাহলে Git আপনার feature commits গুলো `main` এর সাথে merge করে একটি **merge commit** বানাবে।
+
+**উদাহরণ:**
+
+```
+main:    A---B---E---F
+feature: A---B---C---D
+
+merge result:
+main:    A---B---E---F---M
+                   \     /
+                    C---D
+(M = merge commit)
+```
+
+* ইতিহাসে আপনার commits গুলো মূল ব্রাঞ্চের শেষে থাকে, কিন্তু merge commit এর পেছনে তারা দেখা যায়।
+* Git log দেখতে গেলে বোঝা যাবে এগুলো কোথা থেকে এসেছে।
+
+---
+
+## 3️⃣ Rebase এর সাথে পার্থক্য
+
+* **Merge:** commits গুলো তাদের আসল তারিখ ও SHA রেখেই যোগ হয়।
+* **Rebase:** commits গুলোকে নতুন base এ বসিয়ে SHA পরিবর্তন করে, ফলে মনে হয় এগুলো latest এ লেখা হয়েছে।
+
+---
+
+
+
+
