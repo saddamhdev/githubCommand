@@ -2,6 +2,11 @@ Alright — let’s walk through starting a **merge** again from your existing G
 
 Since you’re currently on `main` and up to date, you’ll first want a separate branch to merge.
 
+
+https://www.youtube.com/watch?v=7B_km8LrkJw
+
+<img width="852" height="427" alt="image" src="https://github.com/user-attachments/assets/19877518-9cd4-40c8-8a20-6949a97fa089" />
+
 ---
 
 ## 1️⃣ Create a feature branch and make a change
