@@ -1,3 +1,116 @@
+Got you—here’s the **PR workflow using rebase** (clean, linear history). This replaces the merge-based flow you asked about.
+
+# Rebase‑centric PR Flow
+
+## 1) Create a feature branch and commit
+
+```bash
+git switch main
+git pull origin main
+
+git switch -c feature/demo
+# ...make changes...
+git add -A
+git commit -m "feat: add demo.txt file"
+# (add more commits as you work)
+```
+
+## 2) Keep your feature up to date with `main` (rebasing)
+
+```bash
+git fetch origin
+git rebase origin/main
+# If conflicts:
+#   fix files
+#   git add <fixed-files>
+#   git rebase --continue
+# If you need to bail:
+#   git rebase --abort
+```
+
+> Tip (clean history): before pushing, squash tiny WIP commits:
+
+```bash
+git rebase -i origin/main     # mark small commits as "squash" or "fixup"
+# or use autosquash with fixup! commits:
+# git commit --fixup=<sha>
+# git rebase -i --autosquash origin/main
+```
+
+## 3) Push your rebased feature branch
+
+* First push:
+
+```bash
+git push -u origin feature/demo
+```
+
+* After any rebase (history changed), update the remote safely:
+
+```bash
+git push --force-with-lease
+```
+
+## 4) Open the PR on GitHub
+
+* Target: `feature/demo` → `main`
+* Preferred merge button (depends on repo settings):
+
+  * **“Rebase and merge”** (keeps your linear commits, no merge commit), or
+  * **“Squash and merge”** (one neat commit on `main`)
+* Do **not** rebase `main` itself. Only rebase your feature branch.
+
+## 5) After the PR is merged (server-side)
+
+Locally, you just need to update:
+
+```bash
+git switch main
+git pull origin main
+```
+
+## 6) Cleanup
+
+```bash
+git branch -d feature/demo                 # local
+git push origin --delete feature/demo      # remote
+```
+
+---
+
+## Conflict resolution (during rebase)
+
+```bash
+# rebase pauses with conflicts and marks files
+# 1) edit files to resolve <<<<<<< ======= >>>>>>>
+git add <file1> <file2>
+git rebase --continue
+
+# If you made a wrong turn:
+git rebase --abort
+```
+
+---
+
+## When to choose rebase PR flow
+
+* Team wants a **linear, easy-to-read history**.
+* Force-push is allowed on **feature branches** (never on shared branches).
+* You’re comfortable resolving conflicts during replays.
+
+---
+
+## Quick decision notes
+
+* **Never rebase `main`/`release`/shared branches.**
+* **Use `--force-with-lease`** (not `--force`) after a rebase.
+* If your repo enforces “Squash and merge”, you can still rebase locally to keep your feature tidy; squash on GitHub will make `main` clean either way.
+
+
+
+
+
+
 give commit follow of main, sakib,rakib in rebase
 
 
