@@ -157,6 +157,53 @@ Revert "Added new function"
 
 ---
 
+
+
+So revert meaning?
+
+
+Exactly! Let’s put it clearly:
+
+---
+
+### 🔹 Git Revert Meaning
+
+**`git revert` = “to undo a commit safely by creating a new commit that reverses the changes of the previous commit.”**
+
+* It **does not delete history**.
+* It **reverses the code changes** made in the original commit.
+* A **new commit** is created with a message like:
+
+  ```
+  Revert "Original commit message"
+  ```
+
+---
+
+### 🔹 Simple Analogy
+
+* Imagine you wrote a paragraph in a shared document (commit).
+* Later you decide it was wrong.
+* Instead of erasing it (like reset), you **write another paragraph that cancels the first one**.
+* Everyone can still see both the original paragraph and the “revert paragraph.”
+
+---
+
+### 🔹 Key points
+
+1. Safe for shared/public branches.
+2. Code changes are undone.
+3. Commit history remains intact.
+4. Useful for fixing mistakes **without rewriting history**.
+
+---
+
+If you want, I can also **explain the difference between `git revert` and `git reset` in one short sentence** so it’s easy to remember forever.
+
+Do you want me to do that?
+
+
+
 If you want, I can make a **small visual diagram showing original commit vs revert commit and code changes** so you can see exactly what happens.
 
 Do you want me to do that?
